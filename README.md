@@ -26,4 +26,4 @@ MATLAB (Signal Processing Toolbox, Audio Toolbox)
 Sabrina Cai — ELEC5305, University of Sydney
 
 ## Proposal
-See [ELEC5305_Project_Proposal.pdf](./ELEC5305_Project_Proposal.pdf) for the full project proposal.
+See [ELEC5305_Project_Proposal.pdf](Elec5305.pdf) for the full project proposal.
