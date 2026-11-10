@@ -19,6 +19,7 @@ song units, and test whether acoustic similarity measures reveal repeated unit t
 
 ## Requirements
 MATLAB with Signal Processing Toolbox and Statistics and Machine Learning Toolbox.
+The whale audio is too big to upload to matlaab.but can be found online.
 
 ## Status
 Synthetic-data validation only. The double-threshold detector is a re-implementation from the published
