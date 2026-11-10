@@ -1,0 +1,25 @@
+# Humpback whale song: segmentation and unit-similarity (ELEC5305)
+
+Reproduce and evaluate established signal-processing methods for automatic segmentation of humpback whale
+song units, and test whether acoustic similarity measures reveal repeated unit types.
+
+## Layout
+- `matlab/` : the project code (run from this folder)
+  - `params.m` all parameters
+  - `load_song.m`, `preprocess_song.m` read, resample to 8 kHz, band-pass 80-3500 Hz
+  - `band_envelope_db.m`, `detect_units.m` single / double-threshold energy detectors
+  - `evaluate_segmentation.m` IoU matching -> missed, false, precision/recall/F1, onset/offset error
+  - `mel_filterbank.m`, `mfcc_frames.m`, `unit_representations.m` four unit descriptors
+  - `cluster_units.m`, `adjusted_rand.m` hierarchical clustering + agreement with true unit type
+  - `run_baseline.m`, `run_snr_comparison.m` synthetic-data experiments
+  - `run_real_data.m` template for NIPS4B / Watkins recordings
+- `python/` : mirror of the pipeline with identical parameters, used to generate the first results
+  (`python3 run_experiments.py`)
+- `results/` : figures, synthetic test songs + ground truth, run log
+
+## Requirements
+MATLAB with Signal Processing Toolbox and Statistics and Machine Learning Toolbox.
+
+## Status
+Synthetic-data validation only. The double-threshold detector is a re-implementation from the published
+description (Pace et al., 2010), not Pace's original code. Next: real recording, hand annotation of 30-50 units.
